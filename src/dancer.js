@@ -1,23 +1,49 @@
-//----------------------- FIRST ATTEMPT -------------------//
+// Class Structure
+// .
+// ├── makeDancer
+// │   ├── makeBlinkyDancer
+// |   ├── makeBlinkyDancer
+// |   └── makeBlueSquareDancer
+
+//----------------------- ES6 REFACTOR -------------------//
+class MakeDancer {
+  constructor(top, left, timeBetweenSteps) {
+    this.$node = $('<span class="dancer"></span>');
+    this.top = top;
+    this.left = left;
+    this.timeBetweenSteps = timeBetweenSteps;
+  }
+  oldStep() {
+    let target = this;
+    setTimeout(function () {
+      target.newStep();
+    }, this.timeBetweenSteps);
+  }
+  setPosition() {
+    this.$node.css({ top: this.top, left: this.left });
+  }
+}
+
+//-------------- PSEUDOCLASSICAL REFACTOR ----------------//
 
 // Creates and returns a new dancer object that can step
-var makeDancer = function (top, left, timeBetweenSteps) {
-  this.$node = $('<span class="dancer"></span>');
-  this.top = top;
-  this.left = left;
-  this.timeBetweenSteps = timeBetweenSteps;
-};
+// var MakeDancer = function (top, left, timeBetweenSteps) {
+//   this.$node = $('<span class="dancer"></span>');
+//   this.top = top;
+//   this.left = left;
+//   this.timeBetweenSteps = timeBetweenSteps;
+// };
 
-makeDancer.prototype.oldStep = function () {
-  let target = this;
-  setTimeout(function () {
-    target.newStep();
-  }, this.timeBetweenSteps);
-};
+// MakeDancer.prototype.oldStep = function () {
+//   let target = this;
+//   setTimeout(function () {
+//     target.newStep();
+//   }, this.timeBetweenSteps);
+// };
 
-makeDancer.prototype.setPosition = function () {
-  this.$node.css({ top: this.top, left: this.left });
-};
+// MakeDancer.prototype.setPosition = function () {
+//   this.$node.css({ top: this.top, left: this.left });
+// };
 
 //--------------------- SECOND ATTEMPT --------------------//
 // Creates and returns a new dancer object that can step

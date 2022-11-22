@@ -4,6 +4,9 @@ body, html{
 body{
   margin: 0px;
   background-color:#444;
+  background: url('./src/images/retro-lines-dancefloor.jpeg');
+  background-position: center;
+  background-size: cover;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -24,4 +27,8 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+}
+#gif{
+  background-size: cover;
+  background-repeat: no-repeat;
 }

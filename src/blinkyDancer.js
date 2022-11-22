@@ -1,14 +1,34 @@
-//----------------------- FIRST REFACTOR --------------------//
-var makeBlinkyDancer = function (top, left, timeBetweenSteps) {
-  makeDancer.call(this, top, left, timeBetweenSteps);
-};
-makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
-makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
+// Class Structure
+// .
+// ├── makeDancer
+// │   ├── makeBlinkyDancer
+// |   ├── makeBlinkyDancer
+// |   └── makeBlueSquareDancer
 
-makeBlinkyDancer.prototype.newStep = function () {
-  this.oldStep();
-  this.$node.toggle();
-};
+//----------------------- ES6 REFACTOR -------------------//
+class MakeBlinkyDancer extends MakeDancer {
+  constructor(top, left, timeBetweenSteps) {
+    super(top, left, timeBetweenSteps);
+  }
+  newStep() {
+    this.oldStep();
+    this.$node.toggle();
+  }
+}
+
+window.MakeBlinkyDancer = MakeBlinkyDancer;
+
+//----------------------- FIRST REFACTOR --------------------//
+// var MakeBlinkyDancer = function (top, left, timeBetweenSteps) {
+//   MakeDancer.call(this, top, left, timeBetweenSteps);
+// };
+// MakeBlinkyDancer.prototype = Object.create(MakeDancer.prototype);
+// MakeBlinkyDancer.prototype.constructor = MakeBlinkyDancer;
+
+// MakeBlinkyDancer.prototype.newStep = function () {
+//   this.oldStep();
+//   this.$node.toggle();
+// };
 
 //----------------------- FIRST REFACTOR --------------------//
 // var makeBlinkyDancer = function (top, left, timeBetweenSteps) {
