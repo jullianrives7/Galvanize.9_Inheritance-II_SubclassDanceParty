@@ -1,0 +1,30 @@
+{
+  "name": "galvanize.9_mcsp-inheritance-exercise-ii",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jullianrives7/Galvanize.9_mcsp-inheritance-exercise-II.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jullianrives7/Galvanize.9_mcsp-inheritance-exercise-II/issues"
+  },
+  "homepage": "https://github.com/jullianrives7/Galvanize.9_mcsp-inheritance-exercise-II#readme",
+  "devDependencies": {
+    "eslint": "^8.28.0",
+    "eslint-plugin-react": "^7.31.11"
+  },
+  "dependencies": {
+    "jquery": "^3.6.1"
+  }
+}
