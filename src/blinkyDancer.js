@@ -1,9 +1,10 @@
 // Class Structure
 // .
-// ├── makeDancer
-// │   ├── makeBlinkyDancer
-// |   ├── makeBlinkyDancer
-// |   └── makeBlueSquareDancer
+// ├── MakeDancer
+// │   ├── MakeBlinkyDancer
+// |   ├── MakeSquareDancer
+// |   ├── MakeSpinnyTriangleDancer
+// |   └── MakeGifDancer
 
 //----------------------- ES6 REFACTOR -------------------//
 class MakeBlinkyDancer extends MakeDancer {

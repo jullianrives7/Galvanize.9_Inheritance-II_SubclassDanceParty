@@ -1,9 +1,10 @@
 // Class Structure
 // .
-// ├── makeDancer
-// │   ├── makeBlinkyDancer
-// |   ├── makeBlinkyDancer
-// |   └── makeBlueSquareDancer
+// ├── MakeDancer
+// │   ├── MakeBlinkyDancer
+// |   ├── MakeSquareDancer
+// |   ├── MakeSpinnyTriangleDancer
+// |   └── MakeGifDancer
 
 //----------------------- SQUARE DANCER ES6 -------------------//
 class MakeSquareDancer extends MakeDancer {
@@ -50,16 +51,22 @@ class MakeGifDancer extends MakeDancer {
   constructor(top, left, timeBetweenSteps) {
     super(top, left, timeBetweenSteps);
     this.$node.prop("id", "gif");
-    this.gifArr = ["dancing-banana", "funny-face", "doge", "poofer", "pug"];
+    this.gifArr = [
+      "dancing-banana",
+      "funny-face",
+      "doge",
+      "poofer",
+      "pug",
+      "girl",
+    ];
     this.$node.css({
       "border-radius": 0,
       "border-color": "transparent",
       width: 70,
       height: 70,
       "background-image": `URL("./src/images/${
-        this.gifArr[Math.floor(Math.random() * 5)]
+        this.gifArr[Math.floor(Math.random() * 6)]
       }.gif")`,
-      // `URL("./src/images/dancing-banana.gif")`
     });
   }
   newStep() {
